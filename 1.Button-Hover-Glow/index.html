@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Glow</title>
+    <style>
+        body{
+background:rgb(205, 159, 234)
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .btn{
+            padding: 15px 42px;
+            border-radius:15px;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: rgb(8, 8, 93);
+            transition: all 0.4s ease-in-out;
+        }
+
+
+       .btn:hover{
+        color: rgb(25, 22, 22);
+        box-shadow: 0px 5px 35px rgb(81, 93, 81);
+       }
+
+
+        
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <button class="btn">Canvas View</button>
+    </div>
+</body>
+</html>
