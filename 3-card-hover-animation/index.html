@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Hover Animation</title>
+    <script src="https://kit.fontawesome.com/762bb89c7a.js" crossorigin="anonymous"></script>
+   <style>
+    body{
+        background-color: #fff;
+    }
+   
+
+    .cards{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        height: 100vh;
+    }
+
+    .card{
+        background-color: #f7ffff;
+        color: rgb(33, 27, 27);
+        border-radius: 15px;
+        padding: 30px ;
+        width: 250px;
+          height: 300px;
+        box-shadow: 0px 5px 15px #1b1818;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card:hover{
+        background-color:#4b6b6b ;
+        transition: all 1s ease;
+
+        
+    }
+
+    span i{
+        font-size: 1.8rem;
+        background-color: #cbe0e0;
+        padding: 25px;
+        border-radius: 60%;
+    }
+
+
+    h3{
+        font-size: 1.6rem;
+        font-weight: 600px;
+    }
+    p{
+        letter-spacing: 1px;
+    }
+    
+    .changeTheme{
+        background-color: #1D1E22;
+        color:  #eee;
+    }
+
+
+    .changeTheme .cards .card span i{ 
+        background-color: #121314;
+        color:  #eee;
+    }  
+
+    .changeTheme .cards .card {
+        background-color: #0e0e0f;
+        color:  #eee;
+    }
+
+    #theme-btn{
+        float:right;
+        padding: 10px;
+        font-size: 1.6rem;
+        background-color: #d8e96a;
+        border-radius: 50%;
+        color: #000;
+    }
+   </style>
+
+</head>
+<body>
+
+    <div id="theme-btn" class="far fa-moon"></div>
+        <div class="cards">
+            <div class="card ">
+                <span><i class="fa-solid fa-shirt"></i></span>
+                <h3>Products</h3>
+                <p>Standard chunk of Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, consectetur?</p>
+            </div>
+            <div class="card ">
+                <span><i class="fa-regular fa-object-group"></i></span>
+                <h3>Categories</h3>
+                <p>Standard chunk of Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, consectetur?</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+     const themeBtn = document.getElementById("theme-btn")
+
+
+     
+ 
+
+        themeBtn.onclick = () =>{
+            
+            themeBtn.classList.toggle("fa-sun");
+            if(themeBtn.classList.contains("fa-sun")){
+                themeBtn.classList.remove("fa-moon")
+                document.body.classList.add("changeTheme");
+            }
+            else{
+                themeBtn.classList.add("fa-moon")
+                document.body.classList.remove("changeTheme")
+            }
+        }
+    </script>
+</body>
+</html>
